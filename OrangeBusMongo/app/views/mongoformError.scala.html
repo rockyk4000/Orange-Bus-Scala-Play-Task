@@ -1,0 +1,28 @@
+@(modelForm:Form[models.UserInfo])
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Orange Bus User Form</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/orangebuslogo.png")">
+        <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+    </head>
+    <body background="@routes.Assets.versioned("images/orangebusbg.jpg")">
+     <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/orangebuslogo.png")">
+   
+    <img src="@routes.Assets.versioned("images/oblogo.png")">
+        <form action="@controllers.routes.UserFormController.post" method="post">
+            <br><font face="sans-serif" color="white">Name:</font><br>
+            <input type="text" name="name"><br><br>
+            <font face="sans-serif" color="white">Email:</font><br>
+            <input type="text" name="email"><br>
+            
+            <br><br>
+            <button type="submit"> <font face="sans-serif" color="black">Submit</font></button>
+            <br>
+            <br>
+             <font face="sans-serif" color="red">FORM HAD ERRORS!</font><br>
+        </form> 
+
+    </body>
+</html>
